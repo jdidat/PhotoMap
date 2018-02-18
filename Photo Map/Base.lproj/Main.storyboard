@@ -22,17 +22,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nON-vm-6OH">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nON-vm-6OH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLD-nz-TEd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLD-nz-TEd">
                                 <rect key="frame" x="155" y="511" width="64" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="camera"/>
+                                <connections>
+                                    <action selector="onCamera:" destination="ghP-Ww-KKQ" eventType="touchUpInside" id="QsM-NI-tiE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VLD-nz-TEd" firstAttribute="leading" secondItem="Lxe-6f-KEH" secondAttribute="leading" constant="155" id="0W0-pY-WrU"/>
+                            <constraint firstItem="nON-vm-6OH" firstAttribute="top" secondItem="Lxe-6f-KEH" secondAttribute="top" id="1oB-pQ-XoD"/>
+                            <constraint firstItem="nON-vm-6OH" firstAttribute="leading" secondItem="Lxe-6f-KEH" secondAttribute="leading" id="2ta-YY-8BU"/>
+                            <constraint firstAttribute="bottom" secondItem="VLD-nz-TEd" secondAttribute="bottom" constant="92" id="C7i-6q-ISV"/>
+                            <constraint firstAttribute="trailing" secondItem="VLD-nz-TEd" secondAttribute="trailing" constant="156" id="Eo6-lt-CRZ"/>
+                            <constraint firstItem="VLD-nz-TEd" firstAttribute="top" secondItem="Lxe-6f-KEH" secondAttribute="top" constant="511" id="g9i-vH-jbS"/>
+                            <constraint firstItem="ufw-e1-uLx" firstAttribute="top" secondItem="nON-vm-6OH" secondAttribute="bottom" id="gk8-Tb-Tw3"/>
+                            <constraint firstAttribute="trailing" secondItem="nON-vm-6OH" secondAttribute="trailing" id="pzI-pH-PyZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Photo Map" id="aPF-0T-Ydb"/>
                     <connections>
@@ -62,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRl-fe-rlf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="641" y="777"/>
+            <point key="canvasLocation" x="641" y="822"/>
         </scene>
         <!--Add Location-->
         <scene sceneID="iO8-f3-thv">
